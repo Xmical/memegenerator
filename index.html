@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ИИ Улучшение и Мем Генератор</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ИИ Улучшение Качества Фото  + Создание Мемов</h1>
+        <p>Загрузите фото, улучшите его или добавьте текст для мема</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <input type="file" id="imageInput" accept="image/*"><br>
+
+            <button id="enhanceButton">Улучшить качество (ИИ)</button><br><br>
+
+            <input type="text" id="topText" placeholder="Текст сверху"><br>
+            <input type="text" id="bottomText" placeholder="Текст снизу"><br><br>
+
+            <label>Размер текста: <input type="number" id="textSize" value="40"></label>
+            <label>Цвет текста: <input type="color" id="textColor" value="#ffffff"></label>
+            <label>Шрифт:
+                <select id="textFont">
+                    <option value="Impact">Impact</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Georgia">Georgia</option>
+                </select>
+            </label><br><br>
+
+            <button id="generateButton">Создать мем</button>
+            <a id="downloadLink" style="display:none;" download="enhanced_meme.png">Скачать изображение</a>
+        </div>
+
+        <div class="image-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </main>
+
+    <footer>
+        <p>Сайт создан для демонстрации улучшения качества с ИИ и создания мемов</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
